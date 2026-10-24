@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbearia Ribeiro — Desde 2018 | Carapicuíba</title>
+<meta name="description" content="Barbearia Ribeiro em Carapicuíba: cortes, barba e tratamentos com qualidade, rapidez e ótimo atendimento. Segunda a sábado, 09:30 às 20:00.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== BARBEARIA RIBEIRO — CSS (Mobile First) ===== */
+:root{
+  --bg:#0a0a0b; --surface:#141416; --surface-2:#1b1b1e; --line:#2c2c30;
+  --text:#f3f0ea; --muted:#aaa8a2; --gold:#c8a45a; --gold-hi:#e2c27d;
+  --wa:#25d366;
+}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0a0a0b;color:#f3f0ea;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*,*::before,*::after{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p{margin:0}
+.page{background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+section{scroll-margin-top:108px}
+svg{flex:none}
+
+/* ---- Cabeçalho fixo ---- */
+.header{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-in{display:flex;flex-direction:column;gap:2px;padding:10px 0 8px}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-hi)}
+.nav{display:flex;gap:4px;overflow-x:auto;justify-content:flex-start;scrollbar-width:none;padding:2px 0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 14px;font-size:14px;font-weight:700;color:var(--muted);border-radius:999px;white-space:nowrap}
+.nav a:hover,.nav a.active{color:var(--gold-hi)}
+
+/* ---- Hero ---- */
+.hero{position:relative;min-height:700px;display:flex;align-items:flex-end;justify-content:center;background-color:#000;
+  /* >>> SUBSTITUA A IMAGEM DA FACHADA AQUI <<<
+     Troque a URL abaixo pela foto da fachada da Barbearia Ribeiro (arquivo atual: images/fachada.jpg).
+     Placeholder alternativo: https://via.placeholder.com/1200x600?text=Fachada+Barbearia+Ribeiro */
+  background-image:linear-gradient(180deg,rgba(10,10,11,.15) 0%,rgba(10,10,11,.2) 45%,rgba(10,10,11,.92) 100%),url(images/fachada.jpg);
+  background-size:290% auto;background-position:76% 28px;background-repeat:no-repeat}
+.hero-in{width:100%;max-width:1120px;margin:0 auto;padding:0 20px 28px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.rating{display:flex;align-items:center;gap:14px;padding:12px 18px 12px 16px;background:rgba(10,10,11,.78);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(6px)}
+.rating-n{font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:40px;line-height:1;color:var(--gold-hi)}
+.stars{display:flex;gap:2px;color:var(--gold-hi)}
+.rating-t{font-size:13px;color:#d6d3cc;margin-top:2px}
+.actions{display:flex;flex-direction:column;gap:10px;width:100%;max-width:360px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:12px;font-weight:800;font-size:16px;border:1.5px solid transparent;text-align:center;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:#0a0a0b}
+.btn-gold:hover{background:var(--gold-hi)}
+.btn-wa{background:var(--wa);color:#04210f}
+.btn-wa:hover{background:#3be07b}
+.btn-line{background:transparent;color:var(--gold-hi);border-color:var(--gold)}
+.btn-line:hover{background:rgba(200,164,90,.12)}
+
+/* ---- Seções ---- */
+.sec{padding:64px 0}
+.sec-alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.title{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(28px,7vw,42px);line-height:1.15;text-align:center}
+.rule{display:block;width:56px;height:2px;background:var(--gold);margin:16px auto 0}
+.lead{color:var(--muted);text-align:center}
+
+/* ---- Slogan ---- */
+.slogan{padding:60px 0 56px;text-align:center}
+.since{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.since i{display:block;width:32px;height:1px;background:var(--gold)}
+.slogan h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(24px,6.4vw,40px);line-height:1.3;max-width:760px;margin:20px auto 0;text-wrap:balance}
+.slogan p{color:var(--muted);font-size:17px;margin-top:18px}
+
+/* ---- Serviços ---- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;margin-top:40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 22px}
+.sec-alt .card{background:var(--bg)}
+.card h3{display:flex;align-items:center;gap:12px;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:var(--gold-hi)}
+.card ul{list-style:none;margin:16px 0 0;padding:0}
+.card li{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:16px}
+.card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+
+/* ---- Sobre ---- */
+.about{display:grid;grid-template-columns:1fr;gap:32px;margin-top:36px;align-items:center}
+.about p{color:#d6d3cc;font-size:18px;line-height:1.7}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fact{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px 8px;text-align:center}
+.fact b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:24px;color:var(--gold-hi);line-height:1.1}
+.fact span{display:block;font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.06em;text-transform:uppercase}
+
+/* ---- Avaliações ---- */
+.rev{max-width:520px;margin:36px auto 0;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 22px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.rev .big{font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:72px;line-height:1;color:var(--gold-hi)}
+.rev .btn{margin-top:10px;width:100%;max-width:320px}
+
+/* ---- Instagram ---- */
+.insta{text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px}
+
+/* ---- Rodapé ---- */
+.footer{background:#060607;border-top:1px solid var(--line);padding:56px 0 28px}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:36px}
+.footer h3{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',Georgia,serif;font-size:22px;color:var(--gold-hi);margin-bottom:14px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.row span:first-child{color:var(--muted)}
+.closed{color:#e9a29a}
+.footer p{color:#d6d3cc}
+.ref{color:var(--muted);font-size:14px;margin-top:10px}
+.footer .btn{margin-top:18px;width:100%;max-width:340px}
+.tel{display:flex;align-items:center;gap:12px;min-height:48px;padding:0 16px;margin-bottom:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;font-weight:700}
+.tel:hover{border-color:var(--gold)}
+.copy{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--muted)}
+
+/* ---- Telas maiores ---- */
+@media (min-width:768px){
+  .header-in{flex-direction:row;align-items:center;justify-content:space-between;padding:8px 0}
+  .brand{font-size:20px}
+  .nav{overflow:visible}
+  .hero{min-height:720px;background-size:cover;background-position:center}
+  .hero-in{padding-bottom:48px}
+  .actions{flex-direction:row;max-width:none}
+  .actions .btn{min-width:260px}
+  .sec{padding:88px 0}
+  .about{grid-template-columns:1.2fr 1fr;gap:56px}
+  .facts{grid-template-columns:1fr;}
+  .fact{display:flex;align-items:baseline;justify-content:space-between;text-align:left;padding:18px 22px}
+  .fact span{margin:0}
+  section{scroll-margin-top:80px}
+}
+
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:none}}
+@keyframes curtain{from{opacity:1}to{opacity:0}}
+@keyframes logoZoom{from{transform:scale(1.06)}to{transform:scale(1)}}
+@keyframes flash{0%{color:var(--text)}35%{color:var(--gold-hi);text-shadow:0 0 24px rgba(226,194,125,.45)}100%{color:var(--text)}}
+@keyframes growRule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+/* entrada do site */
+.header{animation:fadeDown .7s cubic-bezier(.2,.7,.2,1) both}
+.hero{overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:#0a0a0b;opacity:0;pointer-events:none;animation:curtain 1.2s ease .05s both;z-index:1}
+.hero-in{position:relative;z-index:2}
+.rating{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) .55s both}
+.actions .btn:nth-child(1){animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) .75s both}
+.actions .btn:nth-child(2){animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) .9s both}
+/* menu: sublinhado animado */
+.nav a{position:relative;transition:color .2s}
+.nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:8px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.nav a:hover::after,.nav a.active::after{transform:scaleX(1)}
+/* ao navegar por menu: título da seção "acende" e o traço cresce */
+section.focus .title{animation:flash 1.3s ease}
+section.focus .rule{animation:growRule .9s ease both}
+.card,.fact,.rev,.btn{transition:transform .3s ease,border-color .3s ease,background .15s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold)}
+/* revelar ao rolar (JS) */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.rule.reveal{transform:scaleX(0);transition:transform .8s ease .15s,opacity .4s}
+.rule.reveal.in{transform:scaleX(1)}
+.card.reveal.in:hover{transform:translateY(-4px)}
+/* sem JS (ex.: no editor): revelar ao rolar via CSS, onde o navegador suporta */
+@supports (animation-timeline:view()){
+  .page:not(.js) :is(.title,.rule,.card,.fact,.rev,.slogan .wrap,.about p,.insta,.foot-grid>div){animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== 1. CABEÇALHO / MENU FIXO ===== -->
+  <header class="header">
+    <div class="wrap header-in">
+      <a class="brand" href="#inicio">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+        Ribeiro
+      </a>
+      <nav class="nav" aria-label="Menu principal">
+        <a href="#inicio" class="active">Início</a>
+        <a href="#servicos">Nossos Serviços</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#avaliacoes">Avaliações</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  <!-- ===== 2. HERO BANNER (FACHADA) ===== -->
+  <!-- >>> Para trocar a imagem da fachada, edite a propriedade background-image da classe .hero no CSS acima. <<< -->
+  <section id="inicio" class="hero" aria-label="Fachada da Barbearia Ribeiro">
+    <div class="hero-in">
+      <div class="rating" aria-label="Nota 4.7 de 5, 38 avaliações no Google">
+        <span class="rating-n">4.7</span>
+        <div>
+          <div class="stars" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <div class="rating-t">38 avaliações no Google</div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-gold" href="https://www.google.com/maps/place/Barbearia+Ribeiro/@-23.5550737,-46.8291405,17z/data=!4m8!3m7!1s0x94cf01410603a37d:0xffa2955cc250d241!8m2!3d-23.5550737!4d-46.8265656!9m1!1b1!16s%2Fg%2F11f7785_2t?entry=ttu&amp;g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span>Avalie-nos no Google</span>
+        </a>
+        <a class="btn btn-wa" href="https://wa.me/5511939030890?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20um%20horario" target="_blank" rel="noopener">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          Entre em Contato Conosco
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. SLOGAN E APRESENTAÇÃO ===== -->
+  <section class="slogan">
+    <div class="wrap">
+      <span class="since"><i></i>Desde 2018<i></i></span>
+      <h2>Transformando a autoestima de nossos clientes com muita qualidade, rapidez e um ótimo atendimento.</h2>
+      <p>Ambiente familiar, cuidado e tradição desde 2018.</p>
+    </div>
+  </section>
+
+  <!-- ===== 4. NOSSOS SERVIÇOS ===== -->
+  <section id="servicos" class="sec sec-alt">
+    <div class="wrap">
+      <h2 class="title">Nossos Serviços</h2>
+      <span class="rule"></span>
+      <div class="grid">
+        <article class="card">
+          <h3>
+            <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+            Cortes
+          </h3>
+          <ul>
+            <li>Corte de cabelo</li>
+            <li>Corte em degradê</li>
+            <li>Corte militar / militar reto</li>
+            <li>Corte personalizado</li>
+            <li>Cortes infantis / Crianças</li>
+            <li>Raspar a cabeça / cabelo</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>
+            <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16l-1.5 8.5a6.5 6.5 0 0 1-13 0z"></path><path d="M9 12h6"></path></svg>
+            Barba
+          </h3>
+          <ul>
+            <li>Barba</li>
+            <li>Aparar a barba</li>
+            <li>Barbear com toalha quente</li>
+            <li>Corte com navalha</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>
+            <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"></path></svg>
+            Tratamentos e Estilo
+          </h3>
+          <ul>
+            <li>Coloração de cabelo</li>
+            <li>Alisamentos de cabelo</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. SOBRE NÓS ===== -->
+  <section id="sobre" class="sec">
+    <div class="wrap">
+      <h2 class="title">Sobre a Barbearia Ribeiro</h2>
+      <span class="rule"></span>
+      <div class="about">
+        <p>Sejam todos bem-vindos! Atuamos no mercado há mais de 6 anos com dois irmãos dedicados a entregar a melhor experiência e a qualidade que nossos clientes merecem. Um ambiente acolhedor e familiar no coração da região.</p>
+        <div class="facts">
+          <div class="fact"><b>2018</b><span>Desde</span></div>
+          <div class="fact"><b>2</b><span>Irmãos</span></div>
+          <div class="fact"><b>Familiar</b><span>Ambiente</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVALIAÇÕES (âncora do menu) ===== -->
+  <section id="avaliacoes" class="sec sec-alt">
+    <div class="wrap">
+      <h2 class="title">Avaliações</h2>
+      <span class="rule"></span>
+      <div class="rev">
+        <span class="big">4.7</span>
+        <div class="stars" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        </div>
+        <p class="lead">38 avaliações no Google</p>
+        <a class="btn btn-gold" href="https://www.google.com/maps/place/Barbearia+Ribeiro/@-23.5550737,-46.8291405,17z/data=!4m8!3m7!1s0x94cf01410603a37d:0xffa2955cc250d241!8m2!3d-23.5550737!4d-46.8265656!9m1!1b1!16s%2Fg%2F11f7785_2t?entry=ttu&amp;g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Avalie-nos no Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. REDES SOCIAIS ===== -->
+  <section id="instagram" class="sec">
+    <div class="wrap insta">
+      <h2 class="title">Siga a Barbearia Ribeiro</h2>
+      <span class="rule"></span>
+      <a class="btn btn-line" href="https://www.instagram.com/barbeariaribeiros1" target="_blank" rel="noopener">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        @barbeariaribeiros1
+      </a>
+    </div>
+  </section>
+  </main>
+
+  <!-- ===== 7. RODAPÉ ===== -->
+  <footer id="contato" class="footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <h3>
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Horário de Funcionamento
+          </h3>
+          <div class="row"><span>Segunda a Sábado</span><strong>09:30 – 20:00</strong></div>
+          <div class="row"><span>Domingo</span><strong class="closed">Fechado</strong></div>
+        </div>
+        <div>
+          <h3>
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Endereço e Localização
+          </h3>
+          <p>Estrada do Gopiúva, 1439 - Vila da Oportunidade, Carapicuíba - SP, 06330-000</p>
+          <p class="ref">Em frente ao restaurante Alibaba e em frente à rotatória da última torre do FLEX4.</p>
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Barbearia+Ribeiro+Estrada+do+Gopiuva+1439+Carapicuiba" target="_blank" rel="noopener">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Como Chegar / Ver no Google Maps
+          </a>
+        </div>
+        <div>
+          <h3>
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Contatos Rápidos
+          </h3>
+          <a class="tel" href="tel:+5511985771488">(11) 98577-1488</a>
+          <a class="tel" href="tel:+5511957249037">(11) 95724-9037</a>
+        </div>
+      </div>
+      <p class="copy">© 2026 Barbearia Ribeiro · Desde 2018</p>
+    </div>
+  </footer>
+
+</div>
+<script>
+  // Animações e interatividade: destaca o menu, revela blocos ao rolar e "acende" a seção ao navegar pelo menu.
+  (function () {
+    var page = document.querySelector('.page');
+    page.classList.add('js');
+    var links = document.querySelectorAll('.nav a');
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var ids = ['inicio', 'servicos', 'sobre', 'avaliacoes'];
+
+    // clique no menu / logo: após a rolagem suave, a seção de destino ganha destaque
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var t = document.getElementById(a.getAttribute('href').slice(1));
+        if (!t) return;
+        setTimeout(function () {
+          t.classList.remove('focus'); void t.offsetWidth; t.classList.add('focus');
+          setTimeout(function () { t.classList.remove('focus'); }, 1500);
+        }, 450);
+      });
+    });
+
+    if (!('IntersectionObserver' in window)) { document.querySelectorAll('.reveal').forEach(function (e) { e.classList.add('in'); }); return; }
+
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          links.forEach(function (l) { l.classList.remove('active'); });
+          var a = map[e.target.id];
+          if (a) { a.classList.add('active'); var nav = a.parentElement; nav.scrollTo({ left: a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2, behavior: 'smooth' }); }
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ids.forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
+
+    var rv = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.title, .rule, .card, .fact, .rev, .slogan .wrap, .about p, .insta, .foot-grid > div').forEach(function (el) {
+      var sib = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+      if (el.matches('.card, .fact, .foot-grid > div')) el.style.transitionDelay = (sib * 0.12) + 's';
+      el.classList.add('reveal'); rv.observe(el);
+    });
+  })();
+</script>
+</body>
+</html>
